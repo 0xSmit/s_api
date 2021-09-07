@@ -34,7 +34,7 @@ if (!config_1.default.has('Server.port')) {
     console.log('Port not specified');
     process.exit(1);
 }
-var PORT = 3000;
+var PORT = 8080;
 var app = (0, express_1.default)();
 var debug = (0, debug_1.default)('app:main');
 app.use((0, helmet_1.default)());

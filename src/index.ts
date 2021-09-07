@@ -13,7 +13,7 @@ if (!config.has('Server.port')) {
   console.log('Port not specified');
   process.exit(1);
 }
-const PORT: number = 3000;
+const PORT: number = 8080;
 const app = Express();
 const debug = Debug('app:main');
 
