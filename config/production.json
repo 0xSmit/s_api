@@ -1,0 +1,7 @@
+{
+  "Server": { "port": 8000 },
+  "Rpc": {
+    "polygon": "https://rpc-mainnet.maticvigil.com",
+    "avax": "https://api.avax.network/ext/bc/C/rpc"
+  }
+}
