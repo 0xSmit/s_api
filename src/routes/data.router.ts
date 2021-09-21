@@ -56,11 +56,15 @@ router.get('/', async (req: Request, res: Response) => {
       raw: {
         totalBurned: burned,
         circulatingSupply,
+        totalSupply: circulatingSupply,
+        maxSupply: circulatingSupply,
         burned: { polygon: poly.burned, avax: avax.burned },
       },
       sanitized: {
         totalBurned: sanitizeDecimals(burned),
         circulatingSupply: sanitizeDecimals(circulatingSupply),
+        totalSupply: sanitizeDecimals(circulatingSupply),
+        maxSupply: sanitizeDecimals(circulatingSupply),
         burned: { polygon: sanitizeDecimals(poly.burned), avax: sanitizeDecimals(avax.burned) },
       },
     };

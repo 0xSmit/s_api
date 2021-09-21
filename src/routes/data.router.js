@@ -92,11 +92,15 @@ router.get('/', function (req, res) { return __awaiter(void 0, void 0, void 0, f
                     raw: {
                         totalBurned: burned,
                         circulatingSupply: circulatingSupply,
+                        totalSupply: circulatingSupply,
+                        maxSupply: circulatingSupply,
                         burned: { polygon: poly.burned, avax: avax.burned },
                     },
                     sanitized: {
                         totalBurned: sanitizeDecimals(burned),
                         circulatingSupply: sanitizeDecimals(circulatingSupply),
+                        totalSupply: sanitizeDecimals(circulatingSupply),
+                        maxSupply: sanitizeDecimals(circulatingSupply),
                         burned: { polygon: sanitizeDecimals(poly.burned), avax: sanitizeDecimals(avax.burned) },
                     },
                 };
