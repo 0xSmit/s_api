@@ -13,7 +13,7 @@ if (!config.has('Server.port')) {
   console.log('Port not specified');
   process.exit(1);
 }
-const PORT: number = 8080;
+const PORT: number = Number(config.has('Server.port'));
 const app = Express();
 const debug = Debug('app:main');
 
@@ -30,4 +30,4 @@ import dataRouter from './routes/data.router';
 app.use('/api/data', dataRouter);
 
 // * ======== Fire Server  ======== * //
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+app.listen(PORT, () => debug(`Server started on port ${PORT}`));

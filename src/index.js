@@ -34,7 +34,7 @@ if (!config_1.default.has('Server.port')) {
     console.log('Port not specified');
     process.exit(1);
 }
-var PORT = 8080;
+var PORT = Number(config_1.default.has('Server.port'));
 var app = (0, express_1.default)();
 var debug = (0, debug_1.default)('app:main');
 app.use((0, helmet_1.default)());
@@ -43,4 +43,4 @@ app.use(express_1.default.json());
 app.use((0, compression_1.default)());
 var data_router_1 = __importDefault(require("./routes/data.router"));
 app.use('/api/data', data_router_1.default);
-app.listen(PORT, function () { return console.log("Server started on port " + PORT); });
+app.listen(PORT, function () { return debug("Server started on port " + PORT); });
