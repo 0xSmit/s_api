@@ -13,7 +13,7 @@ if (!config.has('Server.port')) {
   console.log('Port not specified');
   process.exit(1);
 }
-const PORT: number = Number(config.has('Server.port'));
+const PORT: number = Number(config.get('Server.port'));
 const app = Express();
 const debug = Debug('app:main');
 
