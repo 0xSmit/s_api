@@ -34,7 +34,7 @@ if (!config_1.default.has('Server.port')) {
     console.log('Port not specified');
     process.exit(1);
 }
-var PORT = Number(config_1.default.has('Server.port'));
+var PORT = Number(config_1.default.get('Server.port'));
 var app = (0, express_1.default)();
 var debug = (0, debug_1.default)('app:main');
 app.use((0, helmet_1.default)());
